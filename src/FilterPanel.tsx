@@ -1,10 +1,12 @@
-// FilterPanel.tsx
+import React, {useState} from 'react';
 
-import React from 'react';
+interface FilterProps {
+    onToggleLayer: (layerIndex:number) => void;
+}
 
-const FilterPanel: React.FC<{ onToggleLayer: (layerIndex: number) => void }> = ({ onToggleLayer }) => {
+const FilterPanel = (props: FilterProps) => {
     const handleToggleLayer = (layerIndex: number) => {
-        onToggleLayer(layerIndex);
+        props.onToggleLayer(layerIndex);
     };
 
     return (

@@ -7,7 +7,7 @@ import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import VectorSource from 'ol/source/Vector';
-import { Vector as VectorLayer } from 'ol/layer';
+import {Vector as VectorLayer} from 'ol/layer';
 import { fromLonLat } from 'ol/proj';
 import Feature from 'ol/Feature';
 import Point from 'ol/geom/Point';
@@ -16,11 +16,16 @@ import {LineString} from "ol/geom";
 import {whanganui} from "./kayaks/whanganui";
 import {holdsworth} from "./walks/holdsworth";
 
-const MapComponent: React.FC = () => {
+interface MapComponentProps {
+    update: number;
+}
+
+const MapComponent = (props: MapComponentProps) => {
+    const [oMap, setMap] = useState<Map | null>(null);
     const [lineLayerVisible, setLineLayerVisible] = useState(true);
     const [iconLayersVisible, setIconLayersVisible] = useState(true);
-
     useEffect(() => {
+
         const map = new Map({
             target: 'map',
             layers: [
@@ -41,9 +46,10 @@ const MapComponent: React.FC = () => {
             ],
             view: new View({
                 center: fromLonLat([174.885971, -40.900557]),
-                zoom: 8
+                zoom: 6
             })
         });
+        setMap(map);
 
         return () => {
             map.dispose();
@@ -73,7 +79,7 @@ const MapComponent: React.FC = () => {
 
         return new VectorLayer({
             source: vectorSource,
-            visible: lineLayerVisible
+            visible: lineLayerVisible,
         });
     };
 
@@ -103,14 +109,9 @@ const MapComponent: React.FC = () => {
         });
     };
 
-    const toggleLayerVisibility = (layerIndex: number) => {
-        if (layerIndex === 0) {
-            setLineLayerVisible(!lineLayerVisible);
-        } else {
-            // Index 1 corresponds to the first icon layer
-            setIconLayersVisible(!iconLayersVisible);
-        }
-    };
+    if (props.update != -1 && !!oMap) {
+        oMap.getLayers().getArray()[props.update+1].setVisible(false);
+    }
 
     return <div id="map" style={{ width: '100%', height: '100vh' }}></div>;
 };
