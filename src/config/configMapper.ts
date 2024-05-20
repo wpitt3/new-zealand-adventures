@@ -19,13 +19,21 @@ export interface Journey {
 export interface PathConfig {
     type: string;
     colour: string;
-    width: string;
+    width: number;
 }
 
 export interface LocationConfig {
     type: string;
     image: string;
-    scale: string;
+    scale: number;
+}
+
+export async function readFileAsText(filePath: string): Promise<string> {
+    const response = await fetch(filePath);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch file: ${filePath}`);
+    }
+    return response.text();
 }
 
 export const parseConfig = (configData: string): Map<string, PathConfig|LocationConfig> => {

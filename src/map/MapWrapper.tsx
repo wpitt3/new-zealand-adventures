@@ -13,7 +13,6 @@ import Point from "ol/geom/Point";
 
 interface MapWrapperProps {
     layers: VectorLayer<VectorSource<Feature<LineString | Point>>>[];
-    // view: center, lat, long,
 }
 
 const MapWrapper = (props: MapWrapperProps) => {

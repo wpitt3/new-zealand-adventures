@@ -1,0 +1,54 @@
+[
+  {
+    "name": "First Campervan ",
+    "fromDate": "01/01/23",
+    "toDate": "03/01/23",
+    "campervans": [{
+      "location": [-40.852725, 175.034581],
+      "name": "Waikanae",
+      "date": "01/02/01"
+    }]
+  },
+  {
+    "name": "Whanganui",
+    "fromDate": "01/01/24",
+    "toDate": "03/01/24",
+    "campervans": [{
+      "location": [-39.430324260608714, 175.28236589718196],
+      "name": "Raetihi Holiday Park",
+      "date": "01/02/01"
+    }],
+    "huts" : [{
+      "location": [-39.227044642807975, 174.91528619862862],
+      "name": "John Coull",
+      "date": "01/02/24"
+    },{
+      "location": [-39.33738626910054, 174.99318088659325],
+      "name": "Tieke Kainga",
+      "date": "01/02/24"
+    }],
+    "kayaks" : [{
+      "reference": "whanganui",
+      "name": "Whanganui River Journey",
+      "fromDate": "01/01/24",
+      "toDate": "03/01/24"
+    }]
+  },
+  {
+    "name": "Holdsworth No Stops",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "campervans": [{
+      "location": [-40.906698555348235, 175.48265794402747],
+      "name": "Holdsworth Camp Ground",
+      "date": "01/02/01"
+    }],
+    "walks" : [{
+      "reference": "holdsworth",
+      "name": "Jumbo Circuit",
+      "fromDate": "01/01/24",
+      "toDate": "03/01/24"
+    }]
+  }
+]
+

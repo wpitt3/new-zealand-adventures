@@ -3,13 +3,13 @@ import {parseJourneys, Journey, Location, Path, parseConfig, PathConfig, Locatio
 describe('parseConfig', () => {
     it('should parse config data correctly', () => {
         const configData = JSON.stringify({
-            path1: { type: 'path', colour: '#0000ff', width: '2px' },
-            location1: { type: 'location', image: 'marker.png', scale: '0.5' }
+            path1: { type: 'path', colour: '#0000ff', width: 2},
+            location1: { type: 'location', image: 'marker.png', scale: 0.5 }
         });
 
         const expectedResult: Map<string, PathConfig | LocationConfig> = new Map([
-            ['path1', { type: 'path', colour: '#0000ff', width: '2px' }],
-            ['location1', { type: 'location', image: 'marker.png', scale: '0.5' }]
+            ['path1', { type: 'path', colour: '#0000ff', width: 2}],
+            ['location1', { type: 'location', image: 'marker.png', scale: 0.5 }]
         ]);
 
         const result: Map<string, PathConfig | LocationConfig> = parseConfig(configData);
