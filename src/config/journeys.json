@@ -28,7 +28,7 @@
       "date": "01/02/24"
     }],
     "kayaks" : [{
-      "reference": "whanganui",
+      "reference": "Whanganui Journey_ Whakahoro to Pipiriki",
       "name": "Whanganui River Journey",
       "fromDate": "01/01/24",
       "toDate": "03/01/24"
@@ -44,10 +44,42 @@
       "date": "01/02/01"
     }],
     "walks" : [{
-      "reference": "holdsworth",
+      "reference": "Mount Holdsworth Jumbo Circuit",
       "name": "Jumbo Circuit",
       "fromDate": "01/01/24",
       "toDate": "03/01/24"
+    }]
+  },
+  {
+    "name": "Timber Trail",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "cycles" : [{
+      "reference": "Timber Trail_ Pureora to Ongarue",
+      "name": "Timber Trail",
+      "fromDate": "01/01/24",
+      "toDate": "03/01/24"
+    }]
+  },
+  {
+    "name": "Northern Circuit",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks" : [{
+      "reference": "Tongariro Northern Circuit",
+      "name": "Northern Circuit",
+      "fromDate": "01/01/24",
+      "toDate": "03/01/24"
+    }],
+    "huts" : [{
+      "location": [-39.158619917643655, 175.68919847307305],
+      "name": "Oturere",
+      "date": "01/02/24"
+    }],
+    "campervans": [{
+      "location": [-39.17603429971191, 175.3937284210923],
+      "name": "National Park",
+      "date": "01/02/01"
     }]
   }
 ]

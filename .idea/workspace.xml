@@ -6,13 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="00ebd250-bbc0-40ab-89b5-898c921aa91a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/config/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/config/journeys.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/config/kayaks/whanganui.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/config/walks/holdsworth.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/config/walks/southernCrossing.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/FilterPanel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/configMapper.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/configMapper.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/configMapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/configMapper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/kayaks/whanganui.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/walks/holdsworth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/walks/southernCrossing.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/journeys.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/journeys.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map/LayerBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/LayerBuilder.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map/MapFascade.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapFascade.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map/MapWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapWrapper.tsx" afterDir="false" />
@@ -35,37 +41,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/usr/local/development/new-zealand-adventures/src/config&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/usr/local/development/new-zealand-adventures/node_modules/react-scripts&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/usr/local/development/new-zealand-adventures/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/usr/local/development/new-zealand-adventures/public/config/cycles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/usr/local/development/new-zealand-adventures/node_modules/react-scripts",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/usr/local/development/new-zealand-adventures/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/config/cycles" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/public/config" />
       <recent name="$PROJECT_DIR$/src/config" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/config/kayaks" />
+      <recent name="$PROJECT_DIR$/public/config/walks" />
+      <recent name="$PROJECT_DIR$/src/map" />
+      <recent name="$PROJECT_DIR$/public/config/cycles" />
       <recent name="$PROJECT_DIR$/src/config" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/kayaks" />
-      <recent name="$PROJECT_DIR$/public/images" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.configMapper.test.ts">
@@ -177,6 +184,10 @@
       <workItem from="1715771228587" duration="1955000" />
       <workItem from="1715916044314" duration="1712000" />
       <workItem from="1716001231724" duration="14425000" />
+      <workItem from="1716201492054" duration="7726000" />
+      <workItem from="1716278119989" duration="915000" />
+      <workItem from="1716284372858" duration="12979000" />
+      <workItem from="1716534942702" duration="3328000" />
     </task>
     <servers />
   </component>

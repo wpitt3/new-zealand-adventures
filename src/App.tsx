@@ -2,35 +2,34 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import FilterPanel from './FilterPanel';
 import MapFascade from "./map/MapFascade";
-import {parseConfig, parseJourneys, readFileAsText} from "./config/configMapper";
+import {Journey, LocationConfig, parseConfig, parseJourneys, PathConfig} from "./config/configMapper";
 import configData from "./config/config.json"
 import journeyData from "./config/journeys.json"
 
 function App() {
+    const [selectedJourney, setSelectedJourney] = useState<number> (-1);
+    const [journeys, setJourneys] = useState<Journey[]> ([]);
+    const [stylingConfig, setStylingConfig] = useState<Map<string, PathConfig|LocationConfig>> (new Map());
 
-    // const [updates, setUpdate] = useState<number> (-1);
+    useEffect(() => {
+        const stylingConfig = parseConfig(JSON.stringify(configData));
+        setStylingConfig(stylingConfig);
 
-    // useEffect(() => {
-    //     readFileAsText("./config/walks/holdsworth.txt").then( contents =>
-    //         console.log(contents)
-    //     );
-    // });
+        const fetchFiles = async () => {
+            setJourneys(await parseJourneys(stylingConfig, JSON.stringify(journeyData)));
+        };
 
-    const stylingConfig = parseConfig(JSON.stringify(configData));
-    const journeys = parseJourneys(stylingConfig, JSON.stringify(journeyData));
-
-    const [updates, setUpdate] = useState<number> (-1);
+        fetchFiles();
+    }, []);
 
     const handleToggleLayer = (layerIndex: number) => {
-        setUpdate(layerIndex);
+        setSelectedJourney(layerIndex);
     };
 
     return (
-        <div className="App">
-            <div style={{ display: 'flex' }}>
-                <FilterPanel onToggleLayer={handleToggleLayer} />
-                <MapFascade journeys={journeys} stylingConfig={stylingConfig}/>
-            </div>
+        <div className="App" >
+            <FilterPanel journeys={journeys} selectedJourney={selectedJourney} onToggleLayer={handleToggleLayer} />
+            <MapFascade journeys={journeys} selectedJourney={selectedJourney} stylingConfig={stylingConfig}/>
         </div>
     );
 };

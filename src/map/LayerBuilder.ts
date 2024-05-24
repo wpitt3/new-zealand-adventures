@@ -38,16 +38,14 @@ export class LayerBuilder {
     createJourneyLayer(journey: Journey) {
         const features: Feature<Point|LineString>[] = [];
         journey.paths.forEach((paths, key) => {
-            const formattedRoute = [
-                fromLonLat([175.134581, -40.792725]),
-                fromLonLat([175.234581, -40.752725]),
-                fromLonLat([175.334581, -40.772725])
-            ]
-            const lineFeature = new Feature({
-                geometry: new LineString(formattedRoute)
-            });
-            lineFeature.setStyle(this.stylingConfig.get(key));
-            features.push(lineFeature);
+            paths.forEach(path => {
+                const formattedRoute = path.location.map(it => fromLonLat([it[1], it[0]]))
+                const lineFeature = new Feature({
+                    geometry: new LineString(formattedRoute)
+                });
+                lineFeature.setStyle(this.stylingConfig.get(key));
+                features.push(lineFeature);
+            })
         })
 
         journey.locations.forEach((locations, key) => {

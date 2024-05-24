@@ -5,9 +5,14 @@ export interface Location {
     location: number[],
 }
 
-export interface Path {
+interface PathFromFile {
     name: string,
     reference: string,
+}
+
+export interface Path {
+    name: string,
+    location: number[][]
 }
 
 export interface Journey {
@@ -28,12 +33,14 @@ export interface LocationConfig {
     scale: number;
 }
 
-export async function readFileAsText(filePath: string): Promise<string> {
+async function readPathFile(filePath: string): Promise<number[][]> {
     const response = await fetch(filePath);
     if (!response.ok) {
         throw new Error(`Failed to fetch file: ${filePath}`);
     }
-    return response.text();
+    const responseText = await response.text();
+
+    return responseText.split("\n").slice(1).filter(it => !!it).map(it => it.split(',').map(n => +n))
 }
 
 export const parseConfig = (configData: string): Map<string, PathConfig|LocationConfig> => {
@@ -54,9 +61,26 @@ export const parseConfig = (configData: string): Map<string, PathConfig|Location
     return new Map<string, PathConfig | LocationConfig>();
 }
 
-export const parseJourneys = (config: Map<string, PathConfig|LocationConfig>, journeyData: string): Journey[] => {
+export const parseJourneys = async (config: Map<string, PathConfig|LocationConfig>, journeyData: string): Promise<Journey[]> => {
     try {
         const journeys = JSON.parse(journeyData) as unknown as Array<{ [key: string]: any }>;
+
+        const pathsMap = new Map();
+
+        const pathFiles: string[] = journeys.flatMap(journey => Object.keys(journey).flatMap(key => {
+            if (config.has(key) && config.get(key)?.type === "path") {
+                return (journey[key] as PathFromFile[]).map( it => {
+                    return "./config/"+key+"/"+ it.reference +".csv"
+                })
+            }
+            return []
+        })).filter(it => !!it)
+        for (const pathFile of pathFiles) {
+            if (!pathsMap.has(pathFile)) {
+                pathsMap.set(pathFile, await readPathFile(pathFile));
+            }
+        }
+
         return journeys.map(journey => {
             const name = journey["name"];
             const locations: Map<string, Location[]> = new Map<string, Location[]>();
@@ -64,7 +88,10 @@ export const parseJourneys = (config: Map<string, PathConfig|LocationConfig>, jo
             Object.keys(journey).forEach(key => {
                 if (config.has(key)) {
                     if (config.get(key)?.type === "path") {
-                        paths.set(key, journey[key] as Path[]);
+                        paths.set(key, (journey[key] as PathFromFile[]).map( it => {
+                            const location = pathsMap.get("./config/"+key+"/"+ it.reference +".csv");
+                            return {name: it.name, location} as Path
+                        }))
                     } else if (config.get(key)?.type === "location") {
                         locations.set(key, journey[key] as Location[]);
                     }

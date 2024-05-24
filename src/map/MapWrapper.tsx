@@ -10,12 +10,17 @@ import {LineString} from "ol/geom";
 import VectorSource from "ol/source/Vector";
 import {Vector as VectorLayer} from "ol/layer";
 import Point from "ol/geom/Point";
+import {Extent} from "ol/extent";
+import "./Map.css"
 
 interface MapWrapperProps {
     layers: VectorLayer<VectorSource<Feature<LineString | Point>>>[];
+    viewExtent?: Extent
 }
 
 const MapWrapper = (props: MapWrapperProps) => {
+    const padding = 100;
+
     const [oMap, setMap] = useState<Map | null>(null);
 
     useEffect(() => {
@@ -23,9 +28,8 @@ const MapWrapper = (props: MapWrapperProps) => {
             target: 'map',
             layers: [
                 new TileLayer({
-                    source: new OSM()
+                    source: new OSM(),
                 }),
-                ...props.layers,
             ],
             view: new View({
                 center: fromLonLat([174.885971, -40.900557]),
@@ -39,13 +43,31 @@ const MapWrapper = (props: MapWrapperProps) => {
         };
     }, []);
 
-    // if (props.update != -1 && !!oMap) {
-    //     oMap.getLayers().getArray()[props.update+1].setVisible(false);
-    // }
+    useEffect(() => {
+        if (props.layers && !!oMap) {
+            oMap.setLayers([
+                new TileLayer({
+                    source: new OSM()
+                }),
+                ...props.layers]
+            )
+        }
+    }, [props.layers]);
 
-    // oMap?.setView()
+    useEffect(() => {
+        if (props.viewExtent && !!oMap) {
+            oMap.getView().fit(props.viewExtent, { duration: 1000, padding:[padding, padding, padding, padding], maxZoom: 14})
 
-    return <div id="map" style={{ width: '100%', height: '100vh' }}></div>;
+        }
+        if (!props.viewExtent && !!oMap) {
+            let point = new Point(fromLonLat([174.885971, -40.900557]));
+            oMap.getView().fit(point, { duration: 1000, padding:[padding, padding, padding, padding], maxZoom: 6})
+        }
+    }, [props.viewExtent]);
+
+
+
+    return <div className="map-container" id="map"></div>;
 };
 
 export default MapWrapper;

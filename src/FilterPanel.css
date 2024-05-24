@@ -1,0 +1,40 @@
+
+.filter-panel-details {
+
+}
+
+.filter-panel-details {
+
+}
+
+.filter-panel {
+  width: 200px;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.filter-panel button {
+  width: 180px;
+  display: block;
+  margin: 0 0 5px 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.filter-panel button.selected-button {
+  background-color: #888888;
+  color: #eeeeee;
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+    order:1;
+  }
+
+  .filter-title {
+    display: none;
+  }
+}

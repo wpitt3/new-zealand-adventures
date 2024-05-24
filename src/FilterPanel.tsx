@@ -1,7 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
+import './FilterPanel.css';
+import {Journey} from "./config/configMapper";
 
 interface FilterProps {
     onToggleLayer: (layerIndex:number) => void;
+    journeys: Journey[];
+    selectedJourney: number;
 }
 
 const FilterPanel = (props: FilterProps) => {
@@ -10,24 +14,16 @@ const FilterPanel = (props: FilterProps) => {
     };
 
     return (
-        <div style={{ width: '150px', height: '100vh', backgroundColor: '#f0f0f0'}}>
-            <h2>Filter Panel</h2>
-            <hr />
-            <label>
-                <input type="checkbox" defaultChecked onChange={() => handleToggleLayer(0)} /> Campervan
-            </label>
-            <br />
-            <label>
-                <input type="checkbox" defaultChecked onChange={() => handleToggleLayer(1)} /> Hut
-            </label>
-            <br />
-            <label>
-                <input type="checkbox" defaultChecked onChange={() => handleToggleLayer(2)} /> Walk
-            </label>
-            <br />
-            <label>
-                <input type="checkbox" defaultChecked onChange={() => handleToggleLayer(3)} /> Kayak
-            </label>
+        <div className="filter-panel">
+            <div className="filter-title">
+                <h2>Adventures</h2>
+                <hr />
+            </div>
+            <div className="filter-panel-details">
+            </div>
+            <div className="filter-panel-journeys">
+                {props.journeys.map((it, index) => <button className={props.selectedJourney === index ? "selected-button" : ""} onClick={() => handleToggleLayer(props.selectedJourney === index ? -1 : index)}>{it.name}</button>)}
+            </div>
         </div>
     );
 };
