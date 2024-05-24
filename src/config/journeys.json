@@ -3,84 +3,332 @@
     "name": "First Campervan ",
     "fromDate": "01/01/23",
     "toDate": "03/01/23",
-    "campervans": [{
-      "location": [-40.852725, 175.034581],
-      "name": "Waikanae",
-      "date": "01/02/01"
-    }]
+    "campervans": [
+      {
+        "location": [
+          -40.852725,
+          175.034581
+        ],
+        "name": "Waikanae",
+        "date": "01/02/01"
+      }
+    ],
+    "walks": [
+      {
+        "reference": "Battle Hill Puketiro Loop",
+        "name": "Majestic Goats Track",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      },
+      {
+        "reference": "Kapakapanui Circuit",
+        "name": "Kapakapanui, Monastery Walk",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ]
+  },
+  {
+    "name": "Castle Point",
+    "fromDate": "01/01/23",
+    "toDate": "03/01/23",
+    "campervans": [
+      {
+        "location": [
+          -40.906698555348235,
+          175.48265794402747
+        ],
+        "name": "Holdsworth Camp Ground",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -40.903252756868675,
+          176.2268950048219
+        ],
+        "name": "Castle Point",
+        "date": "01/02/01"
+      }
+    ],
+    "walks": [
+      {
+        "reference": "Mitre Flats Hut via Barra Track",
+        "name": "Mitre Flats",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      },
+      {
+        "reference": "Lighthouse Walk and Deliverance Cove Track Loop",
+        "name": "Scary cliffs and coves",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ]
   },
   {
     "name": "Whanganui",
     "fromDate": "01/01/24",
     "toDate": "03/01/24",
-    "campervans": [{
-      "location": [-39.430324260608714, 175.28236589718196],
-      "name": "Raetihi Holiday Park",
-      "date": "01/02/01"
-    }],
-    "huts" : [{
-      "location": [-39.227044642807975, 174.91528619862862],
-      "name": "John Coull",
-      "date": "01/02/24"
-    },{
-      "location": [-39.33738626910054, 174.99318088659325],
-      "name": "Tieke Kainga",
-      "date": "01/02/24"
-    }],
-    "kayaks" : [{
-      "reference": "Whanganui Journey_ Whakahoro to Pipiriki",
-      "name": "Whanganui River Journey",
-      "fromDate": "01/01/24",
-      "toDate": "03/01/24"
-    }]
+    "campervans": [
+      {
+        "location": [
+          -39.430324260608714,
+          175.28236589718196
+        ],
+        "name": "Raetihi Holiday Park",
+        "date": "01/02/01"
+      }
+    ],
+    "huts": [
+      {
+        "location": [
+          -39.227044642807975,
+          174.91528619862862
+        ],
+        "name": "John Coull",
+        "date": "01/02/24"
+      },
+      {
+        "location": [
+          -39.33738626910054,
+          174.99318088659325
+        ],
+        "name": "Tieke Kainga",
+        "date": "01/02/24"
+      }
+    ],
+    "kayaks": [
+      {
+        "reference": "Whanganui Journey_ Whakahoro to Pipiriki",
+        "name": "Whanganui River Journey",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ]
   },
   {
     "name": "Holdsworth No Stops",
     "fromDate": "01/02/24",
     "toDate": "02/02/24",
-    "campervans": [{
-      "location": [-40.906698555348235, 175.48265794402747],
-      "name": "Holdsworth Camp Ground",
-      "date": "01/02/01"
-    }],
-    "walks" : [{
-      "reference": "Mount Holdsworth Jumbo Circuit",
-      "name": "Jumbo Circuit",
-      "fromDate": "01/01/24",
-      "toDate": "03/01/24"
-    }]
+    "campervans": [
+      {
+        "location": [
+          -40.906698555348235,
+          175.48265794402747
+        ],
+        "name": "Holdsworth Camp Ground",
+        "date": "01/02/01"
+      }
+    ],
+    "walks": [
+      {
+        "reference": "Mount Holdsworth Jumbo Circuit",
+        "name": "Jumbo Circuit",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ]
   },
   {
     "name": "Timber Trail",
     "fromDate": "01/02/24",
     "toDate": "02/02/24",
-    "cycles" : [{
-      "reference": "Timber Trail_ Pureora to Ongarue",
-      "name": "Timber Trail",
-      "fromDate": "01/01/24",
-      "toDate": "03/01/24"
-    }]
+    "cycles": [
+      {
+        "reference": "Timber Trail_ Pureora to Ongarue",
+        "name": "Timber Trail",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ]
   },
   {
     "name": "Northern Circuit",
     "fromDate": "01/02/24",
     "toDate": "02/02/24",
-    "walks" : [{
-      "reference": "Tongariro Northern Circuit",
-      "name": "Northern Circuit",
-      "fromDate": "01/01/24",
-      "toDate": "03/01/24"
-    }],
-    "huts" : [{
-      "location": [-39.158619917643655, 175.68919847307305],
-      "name": "Oturere",
-      "date": "01/02/24"
-    }],
-    "campervans": [{
-      "location": [-39.17603429971191, 175.3937284210923],
-      "name": "National Park",
-      "date": "01/02/01"
-    }]
+    "walks": [
+      {
+        "reference": "Tongariro Northern Circuit",
+        "name": "Northern Circuit",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "huts": [
+      {
+        "location": [
+          -39.158619917643655,
+          175.68919847307305
+        ],
+        "name": "Oturere",
+        "date": "01/02/24"
+      }
+    ],
+    "campervans": [
+      {
+        "location": [
+          -39.17603429971191,
+          175.3937284210923
+        ],
+        "name": "National Park",
+        "date": "01/02/01"
+      }
+    ]
+  },
+  {
+    "name": "Southern Crossing",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Tararua Southern Crossing",
+        "name": "Southern Crossing",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "huts": [
+      {
+        "location": [
+          -40.98575363339308,
+          175.2819019549725
+        ],
+        "name": "Alpha",
+        "date": "01/02/24"
+      },
+      {
+        "location": [
+          -40.90781469153082,
+          175.25620216444574
+        ],
+        "name": "Field",
+        "date": "01/02/24"
+      }
+    ]
+  },
+  {
+    "name": "Napier",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Sunrise Track",
+        "name": "Sunrise",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      },
+      {
+        "reference": "No 1 Line to Lookout",
+        "name": "Goat track walk",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      },
+      {
+        "reference": "Rongokako Track from Main Gates Car Park",
+        "name": "Te Mata",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "campervans": [
+      {
+        "location": [
+          -40.05657524478459,
+          176.22651316827225
+        ],
+        "name": "Norsewood Anzac Park Reserve",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -39.63290901874594,
+          176.98590805281046
+        ],
+        "name": "Te Awanga Point",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -39.674928855042936,
+          176.8599249161675
+        ],
+        "name": "Te Mata Views",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -40.33673883574701,
+          175.81752806415332
+        ],
+        "name": "Woodville ferry Reserve",
+        "date": "01/02/01"
+      }
+    ]
+  },
+  {
+    "name": "Taranaki",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Pouakai Tarns via Mangorei Track and Pouakai Hut",
+        "name": "Tarns walk to see Taranaki",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      },
+      {
+        "reference": "Waingongoro and Enchanted and Tracks Loop from Dawson Falls",
+        "name": "Walk where we ended up at a carpark",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "campervans": [
+      {
+        "location": [
+          -39.770241,
+          174.488635
+        ],
+        "name": "Patae",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -39.19451426820338,
+          174.14376545362913
+        ],
+        "name": "Kaimiro, North Egmont Retreat",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -39.24304612651459,
+          173.77613595705
+        ],
+        "name": "Cape Egmont Boat Club",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -39.770241,
+          174.488635
+        ],
+        "name": "Patae",
+        "date": "01/02/01"
+      }
+    ]
+  },
+  {
+    "name": "Belmont",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Round Knob and Puke Ariki Track",
+        "name": "Belmont to the Knob",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ]
   }
 ]
-
