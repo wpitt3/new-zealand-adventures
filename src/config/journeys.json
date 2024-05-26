@@ -319,6 +319,84 @@
     ]
   },
   {
+    "name": "Rotorua",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Rangiwahia Hut - Deadmans Track",
+        "name": "Rangiwahia",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "campervans": [
+      {
+        "location": [
+          -39.13705592282906,
+          175.83048306350346
+        ],
+        "name": "Waikoko Valley Campsite",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -38.12216353939597,
+          176.30745775384761
+        ],
+        "name": "Holden Bay Holiday Park",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -38.00810458164817,
+          176.34223316845888
+        ],
+        "name": "Trout pools Reserve",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -39.8987574164611,
+          175.9013491556307
+        ],
+        "name": "Rangiwahia",
+        "date": "01/02/01"
+      }
+    ]
+  },
+  {
+    "name": "Manu Climbing Weekend",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Silica Rapids Loop Walk",
+        "name": "Silica Rapids",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "campervans": [
+      {
+        "location": [
+          -39.17603429971191,
+          175.3937284210923
+        ],
+        "name": "National Park",
+        "date": "01/02/01"
+      },
+      {
+        "location": [
+          -39.20841735226462,
+          175.54362035231102
+        ],
+        "name": "Forest and Bird Lodge (Helen on own)",
+        "date": "01/02/01"
+      }
+    ]
+  },
+  {
     "name": "Belmont",
     "fromDate": "01/02/24",
     "toDate": "02/02/24",
@@ -328,6 +406,52 @@
         "name": "Belmont to the Knob",
         "fromDate": "01/01/24",
         "toDate": "03/01/24"
+      }
+    ]
+  },
+  {
+    "name": "Mt Matthews",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Mt Matthews Summit",
+        "name": "Mt Matthews",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "campervans": [
+      {
+        "location": [
+          -41.35082416484304,
+          174.92574414769334
+        ],
+        "name": "Catch Pool",
+        "date": "01/02/01"
+      }
+    ]
+  },
+  {
+    "name": "Tongariro with Fam",
+    "fromDate": "01/02/24",
+    "toDate": "02/02/24",
+    "walks": [
+      {
+        "reference": "Tongariro Alpine Crossing",
+        "name": "Tongariro Alpine Crossing",
+        "fromDate": "01/01/24",
+        "toDate": "03/01/24"
+      }
+    ],
+    "campervans": [
+      {
+        "location": [
+          -39.17603429971191,
+          175.3937284210923
+        ],
+        "name": "National Park",
+        "date": "01/02/01"
       }
     ]
   }
