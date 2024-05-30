@@ -52,18 +52,18 @@ const MapWrapper = (props: MapWrapperProps) => {
                 ...props.layers]
             )
         }
-    }, [props.layers]);
+    }, [oMap, props.layers]);
 
     useEffect(() => {
         if (props.viewExtent && !!oMap) {
             oMap.getView().fit(props.viewExtent, { duration: 1000, padding:[padding, padding, padding, padding], maxZoom: 14})
 
         }
-        // if (!props.viewExtent && !!oMap) {
-        //     let point = new Point(fromLonLat([174.885971, -40.900557]));
-        //     oMap.getView().fit(point, { duration: 3000, padding:[padding, padding, padding, padding], maxZoom: 6})
-        // }
-    }, [props.viewExtent]);
+        if (!props.viewExtent && !!oMap) {
+            let point = new Point(fromLonLat([174.885971, -40.900557]));
+            oMap.getView().fit(point, { duration: 2000, padding:[padding, padding, padding, padding], maxZoom: 7})
+        }
+    }, [oMap, props.viewExtent]);
 
 
 

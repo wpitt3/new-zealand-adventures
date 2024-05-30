@@ -75,13 +75,13 @@ describe('parseJourneys', () => {
     //     expect(result).toEqual(expectedResult);
     // });
 
-    it('should handle empty input', () => {
+    it('should handle empty input', async () => {
         const journeyData = '';
-        expect(parseJourneys(config, journeyData)).toEqual([]);
+        expect(await parseJourneys(config, journeyData)).toEqual([]);
     });
 
-    it('should handle invalid JSON', () => {
+    it('should handle invalid JSON', async () => {
         const journeyData = 'invalid json';
-        expect(parseJourneys(config, journeyData)).toEqual([]);
+        expect(await parseJourneys(config, journeyData)).toEqual([]);
     });
 });

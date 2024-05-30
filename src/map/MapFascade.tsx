@@ -21,7 +21,7 @@ const MapFascade = (props: MapFascadeProps) => {
     useEffect(() => {
         const layerBuilder = new LayerBuilder(props.stylingConfig)
         setLayers(props.journeys.map(journey => layerBuilder.createJourneyLayer(journey)));
-    }, [props.journeys]);
+    }, [props.stylingConfig, props.journeys]);
 
     if (props.selectedJourney !== null && !!layers) {
         if (props.selectedJourney === -1) {

@@ -1,4 +1,3 @@
-import fs from "fs";
 
 export interface Location {
     name: string,
@@ -56,7 +55,7 @@ export const parseConfig = (configData: string): Map<string, PathConfig|Location
         });
         return configMap;
     } catch (error) {
-        console.error('Error parsing JSON:', error);
+        // console.error('Error parsing JSON:', error);
     }
     return new Map<string, PathConfig | LocationConfig>();
 }
@@ -100,7 +99,7 @@ export const parseJourneys = async (config: Map<string, PathConfig|LocationConfi
             return {name, locations, paths};
         });
     } catch (error) {
-        console.error('Error parsing JSON:', error);
+        // console.error('Error parsing JSON:', error);
     }
     return [];
 }
