@@ -1,4 +1,4 @@
-import {parseJourneys, Journey, Location, Path, parseConfig, PathConfig, LocationConfig} from './configMapper';
+import {parseJourneys, Journey, Location, Path, parseConfig, PathConfig, LocationConfig} from '../src/config/configMapper';
 
 describe('parseConfig', () => {
     it('should parse config data correctly', () => {
