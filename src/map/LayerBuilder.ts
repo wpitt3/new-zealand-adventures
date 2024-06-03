@@ -31,11 +31,10 @@ export class LayerBuilder {
                 sc.set(key, iconStyle)
             }
         })
-
         this.stylingConfig = sc;
     }
 
-    createJourneyLayer(journey: Journey) {
+    createJourneyLayer(journey: Journey): VectorLayer<Feature<Point | LineString>> {
         const features: Feature<Point|LineString>[] = [];
         journey.paths.forEach((paths, key) => {
             paths.forEach(path => {

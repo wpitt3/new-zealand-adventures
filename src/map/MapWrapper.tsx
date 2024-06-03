@@ -7,14 +7,13 @@ import View from "ol/View";
 import {fromLonLat} from "ol/proj";
 import Feature from "ol/Feature";
 import {LineString} from "ol/geom";
-import VectorSource from "ol/source/Vector";
 import {Vector as VectorLayer} from "ol/layer";
 import Point from "ol/geom/Point";
 import {Extent} from "ol/extent";
 import "./Map.css"
 
 interface MapWrapperProps {
-    layers: VectorLayer<VectorSource<Feature<LineString | Point>>>[];
+    layers: VectorLayer<Feature<Point | LineString>>[];
     viewExtent?: Extent
 }
 

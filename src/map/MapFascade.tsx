@@ -3,7 +3,6 @@ import React, {useEffect, useState} from "react";
 import MapWrapper from "./MapWrapper";
 import {LayerBuilder} from "./LayerBuilder";
 import {Journey, LocationConfig,PathConfig} from "../config/configMapper";
-import VectorSource from "ol/source/Vector";
 import {Vector as VectorLayer} from "ol/layer";
 import Feature from "ol/Feature";
 import {LineString} from "ol/geom";
@@ -16,7 +15,7 @@ interface MapFascadeProps {
 }
 
 const MapFascade = (props: MapFascadeProps) => {
-    const [layers, setLayers] = useState<VectorLayer<VectorSource<Feature<LineString | Point>>>[]>([]);
+    const [layers, setLayers] = useState<VectorLayer<Feature<Point | LineString>>[]>([]);
 
     useEffect(() => {
         const layerBuilder = new LayerBuilder(props.stylingConfig)
