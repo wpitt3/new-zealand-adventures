@@ -27,7 +27,6 @@ export interface AllAdventures {
     adventures: Adventure[];
 }
 
-
 export type AdventureConfigType = 'location' | 'route'
 
 export interface RouteConfig {

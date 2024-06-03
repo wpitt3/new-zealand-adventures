@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ebd250-bbc0-40ab-89b5-898c921aa91a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/configMapper.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/configMapper.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/configMapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/configMapper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/setupTests.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/FilterPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/adventuresDefs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/adventuresDefs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/combinedConfigMapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/configMapper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/journeys.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map/LayerBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/LayerBuilder.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map/MapFascade.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapFascade.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/combinedConfigMapper.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/configMapper.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/usr/local/development/new-zealand-adventures/public/config/walks&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/usr/local/development/new-zealand-adventures/public/config&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs.jest.jest_package&quot;: &quot;/usr/local/development/new-zealand-adventures/node_modules/react-scripts&quot;,
@@ -54,21 +54,24 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/config" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/src/config" />
       <recent name="$PROJECT_DIR$/public/config/walks" />
       <recent name="$PROJECT_DIR$/public/config/cycles" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/public/config" />
-      <recent name="$PROJECT_DIR$/src/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/config" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/public/config/kayaks" />
-      <recent name="$PROJECT_DIR$/public/config/walks" />
-      <recent name="$PROJECT_DIR$/src/map" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/config/combinedConfigMapper.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.configMapper.test.ts">
+  <component name="RunManager" selected="Jest.parseAdventuress.should correctly build and parse an AllAdventures object">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="new-zealand-adventures" />
       <working_directory value="$PROJECT_DIR$" />
@@ -88,16 +91,6 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="configMapperTest.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/configMapperTest.ts" />
-      <method v="2" />
-    </configuration>
     <configuration name="configMapper.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -106,6 +99,20 @@
       <envs />
       <scope-kind value="TEST_FILE" />
       <test-file value="$PROJECT_DIR$/src/configMapper.test.ts" />
+      <method v="2" />
+    </configuration>
+    <configuration name="parseAdventuress.should correctly build and parse an AllAdventures object" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/combinedConfigMapper.test.ts" />
+      <test-names>
+        <test-name value="parseAdventuress" />
+        <test-name value="should correctly build and parse an AllAdventures object" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="parseConfig" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -149,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.parseAdventuress.should correctly build and parse an AllAdventures object" />
         <item itemvalue="Jest.configMapper.test.ts" />
         <item itemvalue="Jest.parseConfig" />
         <item itemvalue="Jest.parseJourneys (2)" />
         <item itemvalue="Jest.parseJourneys (1)" />
-        <item itemvalue="Jest.configMapperTest.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +190,12 @@
       <workItem from="1716534942702" duration="9976000" />
       <workItem from="1716549244409" duration="2187000" />
       <workItem from="1717042106364" duration="4859000" />
-      <workItem from="1717111082461" duration="5541000" />
+      <workItem from="1717111082461" duration="8762000" />
+      <workItem from="1717369299461" duration="4835000" />
+      <workItem from="1717374358063" duration="4476000" />
+      <workItem from="1717379361209" duration="1106000" />
+      <workItem from="1717380603319" duration="1629000" />
+      <workItem from="1717382560528" duration="1222000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,10 @@
 import React from 'react';
 import './FilterPanel.css';
-import {Journey} from "./config/configMapper";
+import {AllAdventures} from "./config/adventuresDefs";
 
 interface FilterProps {
     onToggleLayer: (layerIndex:number) => void;
-    journeys: Journey[];
+    allAdventures: AllAdventures
     selectedJourney: number;
 }
 
@@ -22,7 +22,7 @@ const FilterPanel = (props: FilterProps) => {
             <div className="filter-panel-details">
             </div>
             <div className="filter-panel-journeys">
-                {props.journeys.map((it, index) => <button className={props.selectedJourney === index ? "selected-button" : ""} onClick={() => handleToggleLayer(props.selectedJourney === index ? -1 : index)}>{it.name}</button>)}
+                {props.allAdventures.adventures.map((it, index) => <button className={props.selectedJourney === index ? "selected-button" : ""} onClick={() => handleToggleLayer(props.selectedJourney === index ? -1 : index)}>{it.name}</button>)}
             </div>
         </div>
     );

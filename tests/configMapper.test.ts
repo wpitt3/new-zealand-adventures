@@ -1,5 +1,5 @@
 import {AdventureBuilder, AllAdventuresBuilder, LocationBuilder, RouteBuilder} from "./AdventuresBuilder";
-import {parseAdventures, parseConfig} from "../src/config/combinedConfigMapper";
+import {parseAdventures, parseConfig} from "../src/config/configMapper";
 import {AdventureConfigBuilder} from "./AdventuresConfigBuilder";
 import {AdventureConfig} from "../src/config/adventuresDefs";
 

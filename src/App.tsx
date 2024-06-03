@@ -2,21 +2,24 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import FilterPanel from './FilterPanel';
 import MapFascade from "./map/MapFascade";
-import {Journey, LocationConfig, parseConfig, parseJourneys, PathConfig} from "./config/configMapper";
-import configData from "./config/config.json"
-import journeyData from "./config/journeys.json"
+import {parseConfig, parseAdventures, readFile} from "./config/configMapper";
+import {AdventureConfig, AllAdventures} from "./config/adventuresDefs";
 
 function App() {
     const [selectedJourney, setSelectedJourney] = useState<number> (-1);
-    const [journeys, setJourneys] = useState<Journey[]> ([]);
-    const [stylingConfig, setStylingConfig] = useState<Map<string, PathConfig|LocationConfig>> (new Map());
+    const [allAdventures, setAllAdventures] = useState<AllAdventures> ({routes:{}, adventures: []});
+    const [stylingConfig, setStylingConfig] = useState<AdventureConfig> ({});
 
     useEffect(() => {
-        const stylingConfig = parseConfig(JSON.stringify(configData));
-        setStylingConfig(stylingConfig);
+
 
         const fetchFiles = async () => {
-            setJourneys(await parseJourneys(stylingConfig, JSON.stringify(journeyData)));
+            const sc = parseConfig(await readFile('./config/adventureConfig.json'))
+            const ad = parseAdventures(sc, await readFile('./config/journeys.json'))
+            console.log(sc)
+            console.log(ad)
+            setStylingConfig(sc);
+            setAllAdventures(ad);
         };
 
         fetchFiles();
@@ -28,8 +31,8 @@ function App() {
 
     return (
         <div className="App" >
-            <FilterPanel journeys={journeys} selectedJourney={selectedJourney} onToggleLayer={handleToggleLayer} />
-            <MapFascade journeys={journeys} selectedJourney={selectedJourney} stylingConfig={stylingConfig}/>
+            <FilterPanel allAdventures={allAdventures} selectedJourney={selectedJourney} onToggleLayer={handleToggleLayer} />
+            <MapFascade allAdventures={allAdventures} selectedJourney={selectedJourney} stylingConfig={stylingConfig}/>
         </div>
     );
 };

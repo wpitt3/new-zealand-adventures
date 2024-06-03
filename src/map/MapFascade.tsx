@@ -2,15 +2,15 @@
 import React, {useEffect, useState} from "react";
 import MapWrapper from "./MapWrapper";
 import {LayerBuilder} from "./LayerBuilder";
-import {Journey, LocationConfig,PathConfig} from "../config/configMapper";
 import {Vector as VectorLayer} from "ol/layer";
 import Feature from "ol/Feature";
 import {LineString} from "ol/geom";
 import Point from "ol/geom/Point";
+import {AdventureConfig, AllAdventures} from "../config/adventuresDefs";
 
 interface MapFascadeProps {
-    journeys: Journey[];
-    stylingConfig: Map<string, PathConfig|LocationConfig>;
+    allAdventures: AllAdventures;
+    stylingConfig: AdventureConfig;
     selectedJourney: number;
 }
 
@@ -19,8 +19,8 @@ const MapFascade = (props: MapFascadeProps) => {
 
     useEffect(() => {
         const layerBuilder = new LayerBuilder(props.stylingConfig)
-        setLayers(props.journeys.map(journey => layerBuilder.createJourneyLayer(journey)));
-    }, [props.stylingConfig, props.journeys]);
+        setLayers(props.allAdventures.adventures.map(adventure => layerBuilder.createJourneyLayer(adventure, props.allAdventures.routes)));
+    }, [props.stylingConfig, props.allAdventures.adventures]);
 
     if (props.selectedJourney !== null && !!layers) {
         if (props.selectedJourney === -1) {
