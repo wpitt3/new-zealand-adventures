@@ -35,6 +35,6 @@ function App() {
             <MapFascade allAdventures={allAdventures} selectedJourney={selectedJourney} stylingConfig={stylingConfig}/>
         </div>
     );
-};
+}
 
 export default App;
