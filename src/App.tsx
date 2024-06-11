@@ -12,7 +12,6 @@ function App() {
 
     useEffect(() => {
 
-
         const fetchFiles = async () => {
             const sc = parseConfig(await readFile('./config/adventureConfig.json'))
             const ad = parseAdventures(sc, await readFile('./config/journeys.json'))
