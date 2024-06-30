@@ -13,7 +13,47 @@
   background-color: #f0f0f0;
 }
 
-.filter-panel button {
+.filter-panel-left {
+  width: 200px;
+  display: block;
+  float: left;
+}
+
+.filter-panel-right {
+  width: 200px;
+  display: block;
+  float: left;
+}
+
+.filter-panel-modify-journeys{
+  width: 200px;
+}
+
+.filter-panel-modify-journeys button {
+  width: 40px;
+  height: 24px;
+  margin: 0 13px 5px 13px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.filter-panel-modify-journeys button svg {
+  font-size: 18px;
+  text-align: center;
+}
+
+.filter-panel-details {
+  height: 130px;
+  width: 200px;
+}
+
+.filter-panel-journeys {
+  width: 200px;
+  display: block;
+  float: left;
+}
+
+.filter-panel-journeys button {
   width: 180px;
   display: block;
   margin: 0 0 5px 10px;
@@ -21,7 +61,7 @@
   border-radius: 4px;
 }
 
-.filter-panel button.selected-button {
+.filter-panel-journeys button.selected-button {
   background-color: #888888;
   color: #eeeeee;
 }
@@ -30,11 +70,25 @@
   .filter-panel {
     padding: 10px;
     width: 100%;
-    height: 200px;
+    height: 150px;
     order:1;
   }
 
   .filter-title {
     display: none;
   }
+
+  .filter-panel-right {
+    width: 180px;
+    height: 160px;
+    overflow: scroll;
+  }
+  .filter-panel-journeys {
+    width: 160px;
+  }
+
+  .filter-panel-journeys button {
+    width: 160px;
+  }
+
 }
