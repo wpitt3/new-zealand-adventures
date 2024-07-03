@@ -2,6 +2,6 @@
     "campervans": { "type": "location", "image": "/images/van.png", "scale":  0.05 },
     "cycles": { "type": "route", "colour": "#999999", "width": 2 },
     "huts": { "type": "location", "image": "/images/hut.png", "scale":  0.05 },
-    "kayaks": { "type": "route", "colour": "#0000ff", "width": 2  },
-    "walks": { "type": "route", "colour": "#815622", "width": 2  }
+    "kayaks": { "type": "route", "colour": "#00F0ff", "width": 2  },
+    "walks": { "type": "route", "colour": "#FF0000", "width": 2  }
 }
