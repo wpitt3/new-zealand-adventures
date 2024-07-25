@@ -5,7 +5,7 @@ Climbs
 Escarpment walk
 kapiti island
 southern walkway
-Eartern walkway
+Eastern walkway
 brooklyn red rocks
 Makara
 pinnacles
