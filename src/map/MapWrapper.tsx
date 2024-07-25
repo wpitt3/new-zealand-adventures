@@ -31,7 +31,7 @@ const MapWrapper = (props: MapWrapperProps) => {
                 }),
             ],
             view: new View({
-                center: fromLonLat([-2.3371829, 51.5963272]),
+                center: fromLonLat([-3.3371829, 51.5963272]),
                 zoom: 6
             })
         });
@@ -59,7 +59,7 @@ const MapWrapper = (props: MapWrapperProps) => {
 
         }
         if (!props.viewExtent && !!oMap) {
-            const point = new Point(fromLonLat([-2.3371829, 51.5963272]));
+            const point = new Point(fromLonLat([-3.3371829, 51.5963272]));
             oMap.getView().fit(point, { duration: 2000, padding:[padding, padding, padding, padding], maxZoom: 7})
         }
     }, [oMap, props.viewExtent]);
