@@ -42,3 +42,9 @@ export interface LocationConfig {
 }
 
 export type AdventureConfig = Record<string, RouteConfig|LocationConfig>;
+
+export interface GlobalState {
+    config: AdventureConfig,
+    routes: Record<string, Coordinate[]>;
+    adventures: Adventure[];
+}

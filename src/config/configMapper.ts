@@ -1,22 +1,16 @@
-import {AdventureConfig, AllAdventures, Route, RouteConfig} from "./adventuresDefs";
+import {Adventure, AdventureConfig, Coordinate, GlobalState, Route, RouteConfig} from "./adventuresDefs";
 
-export const parseConfig = (configData: string): AdventureConfig => {
-    const config = JSON.parse(configData) as AdventureConfig;
-
+const verifyConfig = (config: AdventureConfig) => {
     const hexRegex = /^#(?:[0-9a-fA-F]{3}){1,2}$/;
-
     Object.values(config).forEach( (c) => {
         if (c.type === 'route' && !hexRegex.test((c as RouteConfig).colour)) {
             throw Error('Invalid route colour ' + (c as RouteConfig).colour)
         }
-    })
-    return config;
+    });
 }
 
-export const parseAdventures = (config: AdventureConfig, adventuresJson: string): AllAdventures =>  {
-    const allAdventures = JSON.parse(adventuresJson) as AllAdventures;
-
-    allAdventures.adventures.forEach( adventure => {
+export const verifyAdventures = (config: AdventureConfig, adventures: Adventure[], routes: Record<string, Coordinate[]>) =>  {
+    adventures.forEach( adventure => {
         adventure.locations = {...adventure.locations}
         adventure.routes = {...adventure.routes}
 
@@ -32,15 +26,21 @@ export const parseAdventures = (config: AdventureConfig, adventuresJson: string)
             }
         });
 
-        Object.values(adventure.routes).forEach((routes: Route[]) => {
-            routes.forEach(route => {
-                if (!allAdventures.routes[route.reference]) {
+        Object.values(adventure.routes).forEach((adventureRoutes: Route[]) => {
+            adventureRoutes.forEach(route => {
+                if (!routes[route.reference]) {
                     throw Error('Missing route ' + route.reference)
                 }
             });
         });
     });
-    return allAdventures ;
+}
+
+export const parseState = (stateData: string): GlobalState => {
+    const state = JSON.parse(stateData) as GlobalState;
+    verifyConfig(state.config)
+    verifyAdventures(state.config, state.adventures, state.routes)
+    return state;
 }
 
 export async function readFile(filePath: string): Promise<string> {
