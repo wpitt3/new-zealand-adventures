@@ -12,35 +12,6 @@
 
     },
     "adventures": [
-        {
-          "name": "Cotswold Way",
-          "fromDate": "01/02/24",
-          "toDate": "02/02/24",
-          "routes": {
-            "walks": [
-              {
-                "reference": "Cotswold way",
-                "name": "Cotswold way",
-                "fromDate": "01/01/24",
-                "toDate": "03/01/24"
-              }
-            ]
-          }
-        },
-        {
-          "name": "South West Coast Path",
-          "fromDate": "01/02/24",
-          "toDate": "02/02/24",
-          "routes": {
-            "walks": [
-              {
-                "reference": "South West Coast Path",
-                "name": "South West Coast Path",
-                "fromDate": "01/01/24",
-                "toDate": "03/01/24"
-              }
-            ]
-          }
-        }
+
     ]
 }

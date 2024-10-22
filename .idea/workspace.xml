@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ebd250-bbc0-40ab-89b5-898c921aa91a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MuiFilterPanel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MuiFilterPanel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TextModel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/config/example.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/config/example.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/config/example2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/FilterPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map/LayerBuilder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/LayerBuilder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map/MapFascade.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapFascade.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MuiFilterPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdventureSidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,24 +31,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/usr/local/development/new-zealand-adventures/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/usr/local/development/new-zealand-adventures/node_modules/react-scripts",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/usr/local/development/new-zealand-adventures/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/usr/local/development/new-zealand-adventures/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/usr/local/development/new-zealand-adventures/node_modules/react-scripts&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/usr/local/development/new-zealand-adventures/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -184,7 +183,7 @@
       <workItem from="1718578179391" duration="957000" />
       <workItem from="1719864382957" duration="1465000" />
       <workItem from="1727246999938" duration="7372000" />
-      <workItem from="1729116184980" duration="30142000" />
+      <workItem from="1729116184980" duration="32191000" />
     </task>
     <servers />
   </component>

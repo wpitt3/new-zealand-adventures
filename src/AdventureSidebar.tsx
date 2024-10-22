@@ -36,15 +36,16 @@ const Section = styled(Box)(() => ({
 
 interface AdventureSidebarProps {
     allAdventures: AllAdventures
+    selectedRoute: string
     downloadState: () => void;
     uploadState: (content: string) => void;
     addRoute: (content: string) => void;
     removeRoute: (name: string) => void;
+    selectRoute: (name: string) => void;
 }
 
-const AdventureSidebar: React.FC<AdventureSidebarProps> = ({ allAdventures, downloadState , uploadState, removeRoute, addRoute}) => {
+const AdventureSidebar: React.FC<AdventureSidebarProps> = ({ allAdventures, downloadState , uploadState, removeRoute, addRoute, selectedRoute, selectRoute}) => {
     const [modalOpen, setModalOpen] = useState(false);
-    const [selectedRoute, setSelectedRoute] = useState<string>("");
     const [openSections, setOpenSections] = useState({routes: true});
 
     const routes = Object.entries(allAdventures.routes).map((x) => x[0]);
@@ -57,22 +58,11 @@ const AdventureSidebar: React.FC<AdventureSidebarProps> = ({ allAdventures, down
     };
 
     const handleItemSelection = (index: number) => {
-        setSelectedRoute(routes[index] === selectedRoute ? "" : routes[index])
+        selectRoute(routes[index] === selectedRoute ? "" : routes[index])
     };
 
     return (
-        <Drawer
-            variant="permanent"
-            anchor="left"
-            sx={{
-                width: 280,
-                flexShrink: 0,
-                '& .MuiDrawer-paper': {
-                    width: 280,
-                    boxSizing: 'border-box',
-                },
-            }}
-        >
+        <div>
             <SidebarTitle variant="h5">
                 Adventures
             </SidebarTitle>
@@ -118,8 +108,7 @@ const AdventureSidebar: React.FC<AdventureSidebarProps> = ({ allAdventures, down
             </Section>
             <Divider />
             <TextModal isOpen={modalOpen} onSubmit={addRoute} onClose={() => setModalOpen(false)}/>
-
-        </Drawer>
+        </div>
     );
 };
 
