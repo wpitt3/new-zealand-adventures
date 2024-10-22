@@ -60,4 +60,21 @@ export class LayerBuilder {
             source: new VectorSource({features}),
         });
     }
+
+    createJourneysLayer(routes: Record<string, Coordinate[]>): VectorLayer<Feature<Point | LineString>> {
+        const features: Feature<Point | LineString>[] = [];
+
+        Object.entries(routes).forEach(([key, paths]) => {
+            const formattedRoute = routes[key].map(it => fromLonLat([it[1], it[0]]))
+            const lineFeature = new Feature({
+                geometry: new LineString(formattedRoute)
+            });
+            lineFeature.setStyle(this.stylingConfig.walks);
+            features.push(lineFeature);
+        })
+
+        return new VectorLayer({
+            source: new VectorSource({features}),
+        });
+    }
 }

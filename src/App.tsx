@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import FilterPanel from './FilterPanel';
 import MapFascade from "./map/MapFascade";
 import {readFile, parseState} from "./config/configMapper";
-import {AdventureConfig, AllAdventures} from "./config/adventuresDefs";
+import {AdventureConfig, AllAdventures, Coordinate} from "./config/adventuresDefs";
+import AdventureSidebar from "./MuiFilterPanel";
+import {RouteParser} from "./RouteParser";
+
 
 function App() {
     const [selectedJourney, setSelectedJourney] = useState<number> (-1);
@@ -31,26 +33,30 @@ function App() {
         URL.revokeObjectURL(url);
     };
 
-    const addRoute = () => {
-        // open modal
+    const removeRoute = (name: string) => {
+        setAllAdventures({adventures: allAdventures.adventures, routes: Object.fromEntries(Object.entries(allAdventures.routes).filter(([key]) => name !== key))})
     };
 
-    const uploadState = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                try {
-                    const content = e.target?.result as string;
-                    const state = parseState(content)
-                    setStylingConfig(state.config);
-                    setAllAdventures({adventures: state.adventures, routes: state.routes});
-                } catch (error) {
-                    console.error('Error parsing JSON:', error);
-                    alert('Invalid JSON file');
-                }
-            };
-            reader.readAsText(file);
+    const uploadState = (content: string) => {
+        const state = parseState(content)
+        setStylingConfig(state.config);
+        setAllAdventures({adventures: state.adventures, routes: state.routes});
+    };
+
+    const addRoute = (content: string) => {
+        try {
+            const route = RouteParser.parse(content)
+            route.name = route.name || "New Route"
+            console.log(route.trackPoints)
+            console.log(route.waypoints)
+            setAllAdventures({
+                adventures: allAdventures.adventures,
+                routes: {...allAdventures.routes, [route.name]: route.trackPoints.map(value => [value.y, value.x, value.z] as Coordinate)}
+            })
+
+        } catch (error) {
+            console.error('Error parsing Route:', error);
+            throw error;
         }
     };
 
@@ -60,7 +66,7 @@ function App() {
 
     return (
         <div className="App" >
-            <FilterPanel allAdventures={allAdventures} selectedJourney={selectedJourney} onToggleLayer={handleToggleLayer} downloadState={downloadState} uploadState={uploadState} addRoute={addRoute}/>
+            <AdventureSidebar allAdventures={allAdventures} downloadState={downloadState} uploadState={uploadState} addRoute={addRoute} removeRoute={removeRoute}/>
             <MapFascade allAdventures={allAdventures} selectedJourney={selectedJourney} stylingConfig={stylingConfig}/>
         </div>
     );

@@ -19,8 +19,9 @@ const MapFascade = (props: MapFascadeProps) => {
 
     useEffect(() => {
         const layerBuilder = new LayerBuilder(props.stylingConfig)
-        setLayers(props.allAdventures.adventures.map(adventure => layerBuilder.createJourneyLayer(adventure, props.allAdventures.routes)));
-    }, [props.stylingConfig, props.allAdventures.adventures]);
+        // setLayers(props.allAdventures.adventures.map(adventure => layerBuilder.createJourneyLayer(adventure, props.allAdventures.routes)));
+        setLayers([layerBuilder.createJourneysLayer(props.allAdventures.routes)]);
+    }, [props.stylingConfig, props.allAdventures.adventures, props.allAdventures.routes]);
 
     if (props.selectedJourney !== null && !!layers) {
         if (props.selectedJourney === -1) {
